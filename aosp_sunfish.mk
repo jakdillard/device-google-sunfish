@@ -46,6 +46,9 @@ $(call inherit-product, device/google/sunfish/device-sunfish.mk)
 $(call inherit-product-if-exists, vendor/google_devices/sunfish/proprietary/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/sunfish/prebuilts/device-vendor-sunfish.mk)
 
+# Add EAOSP configuration
+$(call inherit-product, vendor/eaosp/common/config.mk)
+
 # Don't build super.img.
 PRODUCT_BUILD_SUPER_PARTITION := false
 
